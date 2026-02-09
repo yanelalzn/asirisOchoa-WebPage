@@ -11,14 +11,16 @@
     --first-color-alt: ;
     --second-color: ;
     --title-color: hsl(220, 8%, 10%);
+    --title-color-light: #8D8D8D;
     --text-color: ;
     --text-color-light: ;
     --white-color: hsl(0, 0%, 100%);
     --black-color:  hsl(0, 0%, 0%);
     --beige-color-light: hsl(30deg 14.29% 89.02%);
-    --dark-color: ;
+    --dark-color: #2F2F2B;
     --gray-color: ;
-    --body-color: hsl(220, 8%, 99%);
+    /* --body-color: hsl(220, 8%, 99%); */
+    --body-color: #DBD9D8;
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -105,7 +107,6 @@ img {
 .dark-theme {
     --title-color: hsl(218, 100%, 98%);
     --text-color: hsl(218, 8%, 75%);
-    --body-color: hsl(218, 28%, 12%);
     --container-color: hsl(218, 28%, 16%);
 }
 
@@ -221,11 +222,13 @@ img {
 }
 
 /* Show menu */
+
 .show-menu{
     top: 0;
 }
 
 /* Edit Icon */
+
 .ri-circle-fill{
     font-size: 5px;
 }
@@ -233,13 +236,8 @@ img {
     color: #d8d4d4c7;
 }
 
-/* Add shadow header */
-
-/* Active link */
-
-/*========== BUTTON ==========*/
-
 /*========== HOME ==========*/
+
 .home{
     position: relative;
     height: 100vh;
@@ -316,6 +314,7 @@ img {
 }
 
 /*========== HOME ==========*/
+
 .button__opa-30{
     display: flex;
     justify-content: center;
@@ -359,6 +358,130 @@ img {
 
     z-index: 1; /* debajo del texto */
     pointer-events: none;
+}
+
+/* Service */
+
+.services {
+    padding: 4rem 0;
+    background: var(--body-color);
+}
+.services-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+.services-title p{
+    font-size: 20px;
+}
+.services-title p > span{
+    color: #8d8d8d7d;
+}
+.services__title {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--title-color-light);
+    gap: .6rem;
+}
+.carousel {
+    position: relative;
+    padding: 0 0 0 12rem;
+    margin-top: -3rem;
+}
+.carousel__track-container {
+    overflow: hidden;
+}
+.carousel__track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.4s ease;
+}
+.carousel__slide {
+    min-width: 280px;
+    position: relative;
+}
+/* Overlay oscuro */
+.carousel__slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35); /* ajusta la oscuridad */
+    border-radius: 6px;
+    z-index: 1;
+}
+.carousel__slide img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.carousel__slide span {
+    position: absolute;
+    bottom: 18px;
+    left: 15px;
+    color: var(--white-color);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: var(--font-semi-bold);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+}
+
+/* Botones */
+.carousel-btn {
+    display: flex;
+    justify-content: center;
+    gap: 6.5rem;
+    margin-top: 2rem;
+}
+.carousel__btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--dark-color);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.carousel__btn:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+.rotate img{
+    transform: rotate(180deg);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .home {
+        height: 85svh;
+        max-height: 720px;
+    }
+    /* servicios */
+    .carousel__slide {
+        min-width: 280px;
+    }
+    .services-title{
+        display: flex;
+        flex-direction: column;
+    }
+    .services-title p{
+        font-size: 16px;
+    }
+    .services__title{
+        margin-bottom: 1.5rem;
+    }
+    .carousel{
+        padding: 0 0 0 1rem;
+    }
 }
 
 /* For large devices */
@@ -411,11 +534,110 @@ img {
     .bg-header .nav__link::after{
         background-color: var(--title-color);
     }
+    .home__title .line-1{
+        display: flex;
+        justify-content: space-between;
+    }
+    .home__title .line-3{
+        display: flex;
+        gap: 15rem;
+    }
+    .home__title .line-1, .home__title .line-2,
+    .home__title .line-3{
+        font-size: 100px;
+        font-weight: var(--font-regular);
+    }
+    .button__opa-30{
+        justify-content: right;
+    }
+    .button__opa-30 {
+        position: relative;
+        bottom: 6rem;
+        right: -5rem;
+        justify-content: right;
+    }
+    .home__container {
+        padding: 3rem 0 0;
+    }
 
     /* MAIN */
     .home__description{
         width: 30%;
         letter-spacing: 1px;
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .ri-circle-fill{
+        font-size: 6px;
+    }
+    .circle-title{
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    /* Servicios */
+    .services {
+        padding: 3rem 0;
+    }
+    .services__title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .carousel {
+        gap: 1.5rem;
+    }
+    .carousel__slide {
+        min-width: 50%; /* entran 2 cards */
+    }
+    .carousel__slide img {
+        height: 300px;
+    }
+    .carousel__slide span {
+        font-size: 0.85rem;
+        bottom: 12px;
+        left: 12px;
+    }
+    .carousel-btn {
+        gap: 1rem;
+    }
+    .carousel__btn {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* estilos tablet */
+    .home {
+        height: 85svh;
+        max-height: 720px;
+    }
+    .home__description {
+        width: 40%;
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+    .home__title .line-1{
+        display: flex;
+    }
+    .home__title .line-1, 
+    .home__title .line-2, 
+    .home__title .line-3{
+        font-size: 70px;
+    }
+    .button__opa-30 {
+        position: relative;
+        bottom: 5.5rem;
+        right: 0rem;
+        justify-content: right;
+    }
+
+    /* service */
+    .carousel {
+        position: relative;
+        padding: 0 1.5rem;
+    }
+    .carousel__slide {
+        min-width: 50%;
     }
 }
