@@ -23,16 +23,16 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li>
-                        <a href="#home" class="nav__link">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="#project" class="nav__link">Proyectos</a>
+                        <a href="#home" class="nav__link active-link">Inicio</a>
                     </li>
                     <li>
                         <a href="#service" class="nav__link">Servicios</a>
                     </li>
                     <li>
-                        <a href="#contact" class="nav__link">Galería</a>
+                        <a href="#project" class="nav__link">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav__link">Contacto</a>
                     </li>
                 </ul>
                 <!-- Close button -->
@@ -86,8 +86,7 @@
             <circle cx="500" cy="500" r="320" />
             </svg>
         </section>
-    
-        <section class="services">
+        <section class="services" id="service">
             <div class="services-title container">
                 <h2 class="services__title"><i class="ri-circle-fill circle-title"></i>Nuestros Servicios</h2>
                 <p>Con nosotros, es fácil crear un hogar<br> que refleje tu personalidad. <span>Con nosotros,<br> es fácil crear un hogar<br> que refleje tu personalidad</span></p>
@@ -123,6 +122,34 @@
                 <button class="carousel__btn next"><img src="img/arrows-right.png" alt=""></button>
             </div>
         </section>
+        <!-- Banner -->
+        <section class="banner-down-img">
+        </section>
+        <!--=============== CONTACT ===============-->
+        <section class="contact" id="contact">
+            <div class="contact__container container">
+                <div class="contact__left">
+                    <h2 class="contact__title">
+                        PROGRAMAR UNA<br> REUNION
+                    </h2>
+                    <form class="contact__form">
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="number" placeholder="Celular" required>
+                        <input type="email" placeholder="Correo Electrónico" required>
+                        <textarea placeholder="Mensaje" required></textarea>
+                        <button type="submit" class="button__opa-32">
+                            <span class="button-contac">ENVIAR</span>
+                            <i class="ri-circle-fill nav__circle-1"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact__right">
+                    <div class="contact__image">
+                        <img src="img/banner-moderno.png" alt="Interior">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__top container">
@@ -145,7 +172,7 @@
                     <a>+51 958 745 262</a>
                     <a>asirisochoaarquitectos@gmail.com</a>
                 </div>
-                <a href="#destinatario" class="button__opa-31">
+                <a href="#" class="button__opa-31">
                     <p class="button">DISCUTIR EL PROYECTO</p>
                     <i class="ri-circle-fill nav__circle"></i>
                 </a>
@@ -155,7 +182,15 @@
             </div>
         </div>
     </footer>
-    
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=51942875386&text=Hola%20👋%20estoy%20interesado(a)%20en%20sus%20servicios."
+    class="whatsapp-float"
+    target="_blank">
+        <img src="img/WhatsApp.png" alt="WhatsApp">
+    </a>
     <!--=============== MAIN JS ===============-->
     <script src="js/main.js"></script>
 </body>
