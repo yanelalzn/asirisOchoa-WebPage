@@ -42,11 +42,14 @@
             </div>
             <div class="nav__buttons">
                 <!-- Theme button -->
-                <i class="ri-circle-fill nav__theme" id="theme_button"></i><p>&nbsp;&nbsp;CONTACTO</p>
+                <a href="#contact" class="nav__contact" id="contact-btn">
+                    <i class="ri-circle-fill nav__theme"></i>
+                    <span>&nbsp;&nbsp;CONTACTO</span>
+                </a>
                 
                 <!-- Toggle button -->
                 <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-menu-line"></i>
+                    <i class="ri-menu-line"></i>
                 </div>
             </div>
         </nav>
@@ -55,7 +58,7 @@
     <main class="main">
         <!--=============== HOME ===============-->
         <section class="home section" id="home">
-            <img src="img/banner.jpg" alt="banner" class="home__bg">
+            <img src="img/banner-moderno.png" alt="banner" class="home__bg">
             <div class="home__blur"></div>
             <div class="home__container container grid">
                 <div class="home__data">
@@ -83,43 +86,75 @@
             <circle cx="500" cy="500" r="320" />
             </svg>
         </section>
+    
+        <section class="services">
+            <div class="services-title container">
+                <h2 class="services__title"><i class="ri-circle-fill circle-title"></i>Nuestros Servicios</h2>
+                <p>Con nosotros, es fácil crear un hogar<br> que refleje tu personalidad. <span>Con nosotros,<br> es fácil crear un hogar<br> que refleje tu personalidad</span></p>
+            </div>
+            <div class="carousel">
+                <div class="carousel__track-container">
+                    <ul class="carousel__track">
+                        <li class="carousel__slide">
+                        <img src="img/architecture.png" alt="Arquitectura">
+                        <span><i class="ri-circle-fill"></i> Arquitectura</span>
+                        </li>
+                        <li class="carousel__slide">
+                        <img src="img/remodeling_and_expansions.png" alt="Remodelación y ampliaciones">
+                        <span><i class="ri-circle-fill"></i> Remodelación y ampliaciones</span>
+                        </li>
+                        <li class="carousel__slide">
+                        <img src="img/diseño_de_interiores.png" alt="">
+                        <span><i class="ri-circle-fill"></i> Diseño interior</span>
+                        </li>
+                        <li class="carousel__slide">
+                        <img src="img/muebles_personalizados.jpg" alt="">
+                        <span><i class="ri-circle-fill"></i> Muebles personalizados</span>
+                        </li>
+                        <li class="carousel__slide">
+                        <img src="img/paisajismo_y_jardines.png" alt="">
+                        <span><i class="ri-circle-fill"></i> Paisajismo y jardines</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="carousel-btn">
+                <button class="carousel__btn prev rotate"><img src="img/arrows-right.png" alt=""></button>
+                <button class="carousel__btn next"><img src="img/arrows-right.png" alt=""></button>
+            </div>
+        </section>
     </main>
-    <section class="services">
-        <div class="services-title container">
-            <h2 class="services__title"><i class="ri-circle-fill circle-title"></i>Nuestros Servicios</h2>
-            <p>Con nosotros, es fácil crear un hogar<br> que refleje tu personalidad. <span>Con nosotros,<br> es fácil crear un hogar<br> que refleje tu personalidad</span></p>
+    <footer class="footer">
+        <div class="footer__top container">
+            <span>ASIRI OCHOA ARQUITECTURA</span>
+            <span>DISEÑO INTERIOR & ESPACIOS</span>
+            <span>LIMA — PERÚ</span>
+            <span>PROYECTOS PERSONALIZADOS</span>
         </div>
-        <div class="carousel">
-            <div class="carousel__track-container">
-                <ul class="carousel__track">
-                    <li class="carousel__slide">
-                    <img src="img/architecture.png" alt="Arquitectura">
-                    <span><i class="ri-circle-fill"></i> Arquitectura</span>
-                    </li>
-                    <li class="carousel__slide">
-                    <img src="img/remodeling_and_expansions.png" alt="Remodelación y ampliaciones">
-                    <span><i class="ri-circle-fill"></i> Remodelación y ampliaciones</span>
-                    </li>
-                    <li class="carousel__slide">
-                    <img src="img/diseño_de_interiores.png" alt="">
-                    <span><i class="ri-circle-fill"></i> Diseño interior</span>
-                    </li>
-                    <li class="carousel__slide">
-                    <img src="img/muebles_personalizados.jpg" alt="">
-                    <span><i class="ri-circle-fill"></i> Muebles personalizados</span>
-                    </li>
-                    <li class="carousel__slide">
-                    <img src="img/paisajismo_y_jardines.png" alt="">
-                    <span><i class="ri-circle-fill"></i> Paisajismo y jardines</span>
-                    </li>
-                </ul>
+        <div class="footer__line container"></div>
+        <div class="footer__content container">
+            <div class="footer__left">
+                <div class="footer__links">
+                    <p class="footer__subtitle">Links</p>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Servicios</a>
+                    <a href="#">Proyectos</a>
+                </div>
+                <div class="footer__contact">
+                    <p class="footer__subtitle">Contacto</p>
+                    <a>+51 958 745 262</a>
+                    <a>asirisochoaarquitectos@gmail.com</a>
+                </div>
+                <a href="#destinatario" class="button__opa-31">
+                    <p class="button">DISCUTIR EL PROYECTO</p>
+                    <i class="ri-circle-fill nav__circle"></i>
+                </a>
+            </div>
+            <div class="footer__image">
+                <img src="img/banner-moderno.png" alt="Proyecto">
             </div>
         </div>
-        <div class="carousel-btn">
-            <button class="carousel__btn prev rotate"><img src="img/arrows-right.png" alt=""></button>
-            <button class="carousel__btn next"><img src="img/arrows-right.png" alt=""></button>
-        </div>
-    </section>
+    </footer>
     
     <!--=============== MAIN JS ===============-->
     <script src="js/main.js"></script>
