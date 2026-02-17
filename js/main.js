@@ -31,57 +31,60 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 // Servicios
 
 const track = document.querySelector('.carousel__track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.next');
-const prevButton = document.querySelector('.prev');
 
-const gap = 24;
-let index = 0;
+if (track) {
 
-// 🔁 DUPLICAR SLIDES
-slides.forEach(slide => {
-    const clone = slide.cloneNode(true);
-    track.appendChild(clone);
-});
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
 
-const allSlides = Array.from(track.children);
+    const gap = 24;
+    let index = 0;
 
-function slideWidth() {
-    return allSlides[0].getBoundingClientRect().width + gap;
-}
+    slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        track.appendChild(clone);
+    });
 
-function updatePosition() {
-  track.style.transform = `translateX(-${index * slideWidth()}px)`;
-}
+    const allSlides = Array.from(track.children);
 
-nextButton.addEventListener('click', () => {
-    index++;
-    updatePosition();
-
-    if (index >= slides.length) {
-        setTimeout(() => {
-        track.style.transition = 'none';
-        index = 0;
-        updatePosition();
-        track.offsetHeight;
-        track.style.transition = 'transform 0.4s ease';
-        }, 400);
+    function slideWidth() {
+        return allSlides[0].getBoundingClientRect().width + gap;
     }
-});
 
-prevButton.addEventListener('click', () => {
-    if (index === 0) {
-        track.style.transition = 'none';
-        index = slides.length;
-        updatePosition();
-        track.offsetHeight;
-        track.style.transition = 'transform 0.4s ease';
+    function updatePosition() {
+        track.style.transform = `translateX(-${index * slideWidth()}px)`;
     }
-    index--;
-    updatePosition();
-});
 
-window.addEventListener('resize', updatePosition);
+    nextButton.addEventListener('click', () => {
+        index++;
+        updatePosition();
+
+        if (index >= slides.length) {
+            setTimeout(() => {
+            track.style.transition = 'none';
+            index = 0;
+            updatePosition();
+            track.offsetHeight;
+            track.style.transition = 'transform 0.4s ease';
+            }, 400);
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (index === 0) {
+            track.style.transition = 'none';
+            index = slides.length;
+            updatePosition();
+            track.offsetHeight;
+            track.style.transition = 'transform 0.4s ease';
+        }
+        index--;
+        updatePosition();
+    });
+
+    window.addEventListener('resize', updatePosition);
+}
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const bgHeader = () => {
@@ -103,9 +106,9 @@ const scrollActive = () => {
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
         if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
             sectionsClass.classList.add('active-link')
@@ -126,3 +129,68 @@ const scrollUp = () =>{
 }
 
 window.addEventListener('scroll', scrollUp)
+
+
+/*=============== SLIDER PROYECTOS ===============*/
+
+const projectsContainer = document.querySelector(".projects-container");
+if (projectsContainer) {
+
+    const projectsTrack = projectsContainer.querySelector(".projects-track");
+    const nextBtnProjects = projectsContainer.querySelector(".project-next");
+    const prevBtnProjects = projectsContainer.querySelector(".project-prev");
+
+    const gapProjects = 60;
+    const slidesProjects = Array.from(projectsTrack.children);
+
+    let indexProjects = 0;
+
+    // 🔁 DUPLICAR SLIDES
+    slidesProjects.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        projectsTrack.appendChild(clone);
+    });
+
+    const allSlidesProjects = Array.from(projectsTrack.children);
+
+    function slideWidthProjects() {
+        return allSlidesProjects[0].getBoundingClientRect().width + gapProjects;
+    }
+
+    function updatePositionProjects() {
+        projectsTrack.style.transform =
+        `translateX(-${indexProjects * slideWidthProjects()}px)`;
+    }
+
+    nextBtnProjects.addEventListener("click", () => {
+        indexProjects++;
+        updatePositionProjects();
+
+        if (indexProjects >= slidesProjects.length) {
+        setTimeout(() => {
+            projectsTrack.style.transition = "none";
+            indexProjects = 0;
+            updatePositionProjects();
+            projectsTrack.offsetHeight;
+            projectsTrack.style.transition = "transform 0.6s ease";
+        }, 600);
+        }
+    });
+
+    prevBtnProjects.addEventListener("click", () => {
+
+        if (indexProjects === 0) {
+        projectsTrack.style.transition = "none";
+        indexProjects = slidesProjects.length;
+        updatePositionProjects();
+        projectsTrack.offsetHeight;
+        projectsTrack.style.transition = "transform 0.6s ease";
+        }
+
+        indexProjects--;
+        updatePositionProjects();
+    });
+
+    window.addEventListener("resize", updatePositionProjects);
+
+}
