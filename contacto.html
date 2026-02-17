@@ -26,13 +26,13 @@
                         <a href="index.html" class="nav__link">Inicio</a>
                     </li>
                     <li>
-                        <a href="servicios.html" class="nav__link active-link">Servicios</a>
+                        <a href="servicios.html" class="nav__link">Servicios</a>
                     </li>
                     <li>
                         <a href="projectos.html" class="nav__link">Proyectos</a>
                     </li>
                     <li>
-                        <a href="contacto.html" class="nav__link">Contacto</a>
+                        <a href="contacto.html" class="nav__link  active-link">Contacto</a>
                     </li>
                 </ul>
                 <!-- Close button -->
@@ -64,12 +64,12 @@
                     <div class="home__data-p">
                         <p class="home__description  descp_ser">
                             <i class="ri-circle-fill"></i>
-                            &nbsp;Servicios
+                            &nbsp;Contacto
                         </p>
                     </div>
                     <div class="home__data-h1">
                         <h1 class="home__title_ser">
-                        ¡Hagamos con amor todo<br> lo que hacemos!
+                        Diseñemos juntos el espacio <br> que imaginas.
                         </h1>
                         <a href="#contact">
                             <p class="p-unline">DESCUBRIR</p>
@@ -83,59 +83,67 @@
             <circle cx="500" cy="500" r="320" />
             </svg>
         </section>
-        <section class="services">
-            <div class="services-title container">
-                <h3>NUESTROS<br>SERVICIOS</h3>
-                <p>La calidad en la ejecución, la atención al detalle y la coherencia en 
-                    cada diseño reflejan nuestro compromiso con resultados sólidos y espacios que perduran en el tiempo. 
-                    <span>La calidad en la ejecución, la atención al detalle y la coherencia 
-                        en cada diseño reflejan nuestro compromiso con resultados sólidos y espacios que perduran en el tiempo, espacios que perduran en el tiempo.
-                    </span>
-                </p>
-            </div>
-            <div class="services_cards container">
-                <ul class="carousel__serv">
-                    <li class="carousel__slide carousel__slide_serv">
-                        <img src="img/architecture.png" alt="Arquitectura">
-                        <span><i class="ri-circle-fill"></i> Arquitectura</span>
-                    </li>
-                    <li class="carousel__slide carousel__slide_serv">
-                        <img src="img/remodeling_and_expansions.png" alt="Remodelación y ampliaciones">
-                        <span><i class="ri-circle-fill"></i> Remodelación y ampliaciones</span>
-                    </li>
-                    <li class="carousel__slide carousel__slide_serv">
-                        <img src="img/diseño_de_interiores.png" alt="">
-                        <span><i class="ri-circle-fill"></i> Diseño interior</span>
-                    </li>
-                    <li class="carousel__slide carousel__slide_serv">
-                        <img src="img/muebles_personalizados.jpg" alt="">
-                        <span><i class="ri-circle-fill"></i> Muebles personalizados</span>
-                    </li>
-                    <li class="carousel__slide carousel__slide_serv">
-                        <img src="img/paisajismo_y_jardines.png" alt="">
-                        <span><i class="ri-circle-fill"></i> Paisajismo y jardines</span>
-                    </li>
-                </ul>
+        <!--=============== CONTACTO INFO ===============-->
+        <section class="contact-inf container">
+            <div class="contact-container container">
+                <div class="contact-item">
+                    <span class="contact-small">Nuestro Edificio</span>
+                    <h2 class="contact-title">Dirección</h2>
+                    <div class="line"></div>
+                    <p>121 King Street, Melbourne<br>
+                    Victoria 3000 Perú
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-small">Llámanos</span>
+                    <h2 class="contact-title">Celular</h2>
+                    <div class="line"></div>
+                    <p>+51 985485256</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-small">Correo Electrónico</span>
+                    <h2 class="contact-title">Email</h2>
+                    <div class="line"></div>
+                    <p>asirisochoaarquitectos@email.com</p>
+                </div>
             </div>
         </section>
-        <section class="main_down_serv">
-            <div class="home__container container grid">
-                <div class="home__data home_ser">
-                    <div class="home__data-p">
-                        <p class="home__description  descp_ser">
-                            <i class="ri-circle-fill"></i>
-                            &nbsp;Contactanos
-                        </p>
-                    </div>
-                    <div class="home__data-h1">
-                        <h1 class="home__title_ser" style="color: black;">
-                        ¿Tienes un proyecto en<br> mente? ¡Empieza uno nuevo<br class="ete"> con nosotros!
-                        </h1>
-                        <a href="#contact">
-                            <p style="color: black; text-decoration: underline;">DESCUBRIR</p>
-                        </a>
+        <section class="contact">
+            <div class="contact__contain container">
+                <div class="contact__left">
+                    <span class="contact-subtitle">Para nuevo Proyecto</span>
+                    <h2 class="contact-heading">Contáctanos Hoy!</h2>
+                    <div class="line"></div>
+                    <p class="contact-text">
+                        Cuéntanos sobre tu proyecto y trabajemos juntos en un diseño funcional,
+                        estético y pensado a tu medida.
+                    </p>
+                    <p class="title_redes">Síganos</p>
+                    <div class="contact__social">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-whatsapp-line"></i></a>
                     </div>
                 </div>
+                <div class="contact-right">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Tu nombre es:" required>
+                        <div class="row">
+                            <input type="email" placeholder="Tu correo es:" required>
+                            <input type="tel" placeholder="Tu teléfono es:" required>
+                        </div>
+                        <textarea placeholder="Cuéntanos un poco más:" rows="4"></textarea>
+                        <button type="submit" class="button__opa-32">
+                            <span class="button-contac">ENVIAR AHORA</span>
+                            <i class="ri-circle-fill nav__circle-1"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="map-section container">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7805.498105846824!2d-77.07341188810709!3d-11.99185835798032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce5bb9267e03%3A0xab5c2bde0669fcac!2sCarlos%20Izaguirre!5e0!3m2!1ses!2spe!4v1771346950832!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
