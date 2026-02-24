@@ -249,7 +249,7 @@ section {
 
 /* Show-scroll */
 .show-scroll{
-    bottom: 2rem;
+    bottom: 6.5rem;
 }
 
 /*=============== Change background header ===============*/
@@ -801,7 +801,7 @@ button {
 .whatsapp-float{
     position: fixed;
     bottom: 18px;
-    right: 2rem;
+    right: 0.9rem;
     width: 65px;
     height: 65px;
     display: flex;
