@@ -160,8 +160,7 @@ section {
     height: 3.5rem;
 }
 .nav__toggle,
-.nav__close,
-.nav__theme{
+.nav__close {
     display: inline-flex;
     font-size: 1.5rem;
     cursor: pointer;
@@ -173,7 +172,7 @@ section {
     display: flex;
     align-items: center;
 }
-.nav__theme, .nav__buttons p{
+.nav__buttons p{
     display: none;
 }
 
@@ -267,20 +266,7 @@ section {
 }
 
 /* Button contact */
-.nav__contact{
-    display: none;
-    align-items: center;
-    color: var(--white-color);
-    cursor: pointer;
-    transition: color .3s;
-}
-.nav__theme{
-    transition: color .3s ease;
-}
-.nav__contact:hover .nav__theme{
-    color: #ab947c;
-}
-.bg-header :is(.nav__logo, .nav__toggle, .nav__theme, .nav__contact, .ri-menu-line){
+.bg-header :is(.nav__logo, .nav__toggle, .ri-menu-line){
     color: var(--title-color);
 }
 .bg-header .nav__logo img{
@@ -325,7 +311,7 @@ section {
 .home__data{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
 }
 .home__description{
     width: 71%;
@@ -366,22 +352,14 @@ section {
     letter-spacing: -2px;
 }
 .home__data-h1 {
-    display: inline-grid;
-    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 /*=============== HOME ===============*/
 
-.button__opa-30{
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    align-items: center;
-}
 .nav__circle{
     transition: color .3s ease;
 }
-.button__opa-30:hover .nav__circle,
 .button__opa-31:hover .nav__circle,
 .button__opa-32:hover .nav__circle-1{
     color: #7a7267;
@@ -437,6 +415,59 @@ section {
     pointer-events: none;
 }
 
+/*=============== NOSOTROS ===============*/
+.about {
+    position: relative;
+    padding: 4rem 0;
+    background-color: var(--body-color);
+    z-index: 10;
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.about-img img {
+    width: 100%;
+    max-width: 470px;
+}
+.about-subtitle {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--black-color);
+    font-weight: var(--font-medium);
+}
+.about-title {
+    font-size: 42px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+.about-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    max-width: 500px;
+}
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: var(--black-color);
+    color: var(--white-color);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.about-btn:hover {
+    background: #333;
+}
+.about-btn i{
+    font-size: 20px;
+}
+
 /*=============== SERVICIO ===============*/
 .services {
     position: relative;
@@ -460,15 +491,15 @@ section {
     text-align: center;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 28px;
     display: flex;
     align-items: center;
-    color: var(--title-color-light);
+    color: var(--black-color);
     gap: .6rem;
 }
 .carousel {
     position: relative;
-    padding: 0 0 0 12rem;
+    padding-left: calc((100vw - 1200px) / 2 + -0.5rem);
     margin-top: -3rem;
 }
 .carousel__track-container {
@@ -559,91 +590,81 @@ section {
 }
 
 /*=============== FOOTER ===============*/
-.footer{
+.footer {
     background-color: var(--dark-color);
-    padding: 3rem 0;
     color: var(--white-color);
+    padding: 5rem 0 2rem 0;
 }
-.footer__top{
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
-    color: #cfcfcf;
-    margin-bottom: 2rem;
+    gap: 4rem;
 }
-.footer__line{
-    height: 1px;
-    background-color: #756D61;
-    margin-bottom: 2rem;
-}
-.footer__content{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-}
-.footer__left{
-    display: flex;
-    flex-wrap: wrap;
-}
-.footer__links,
-.footer__contact{
+.footer-brand{
     width: 30%;
 }
-.footer__subtitle{
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 1.5rem;
+.footer h4{
+    color: #989898;
 }
-.footer__links a, .footer__contact a{
-    display: block;
-    font-size: 24px;
-    text-decoration: none;
+.footer-link-contain{
+    display: flex;
+    justify-content: right;
+    width: 70%;
+    gap: 4rem;
+}
+.footer-logo {
+    width: 250px;
+}
+.footer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
     color: #cfcfcf;
-    margin-bottom: .8rem;
-    transition: .3s;
 }
-.footer__links a:hover{
-    color: var(--white-color);
+.footer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
 }
-.button__opa-30{
-    width:  100%;
-    align-items: center;
-}
-.footer__image{
-    width: 40%;
-}
-.footer__image img{
-    width: 100%;
+.footer-links a {
     display: block;
-}
-.button__opa-31{
-    width: 100%;
-    display: flex;
-    margin-top: 4rem;
-}
-.button__opa-32{
-    width: 100%;
-    display: flex;
-    margin-top: 1rem;
-}
-.footer__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.footer__social a {
-    color: #fff;
-    font-size: 20px;
-    margin-right: 15px;
+    margin-bottom: 0.8rem;
+    color: #e5e5e5;
+    text-decoration: none;
     transition: 0.3s;
 }
-.footer__social a:hover {
-    color: #c59d5f;
+.footer-links a:hover {
+    opacity: 0.6;
 }
-.footer__copy p {
-    margin: 0;
-    font-size: 14px;
+.footer-contact p {
+    margin-bottom: 0.8rem;
+}
+.footer-social {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.3rem;
+}
+.footer-social a {
+    color: #e5e5e5;
+    transition: 0.3s;
+}
+.footer-social a:hover {
+    opacity: 0.6;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #bfbfbf;
 }
 
 /*=============== PROYECTO ===============*/
@@ -675,11 +696,12 @@ section {
     text-align: center;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     align-items: center;
-    color: var(--title-color-light);
+    color: var(--black-color);
     gap: .6rem;
+    font-weight: 400;
 }
 .left-title h2{
     text-transform: uppercase;
@@ -763,6 +785,7 @@ button {
     background: none;
     border: none;
     cursor: pointer;
+    display: flex;
 }
 .contact-form input,
 .contact-form textarea {
@@ -840,6 +863,22 @@ button {
         height: 85svh;
         max-height: 720px;
     }
+    /*========== NOSOTROS ==========*/
+    .about{
+        padding: 4rem 0 2rem;
+    }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .about-title {
+        font-size: 28px;
+    }
+    .about-text {
+        margin: 0 auto;
+    }
+
     /*========== SERVICIOS ==========*/
     .carousel__slide {
         min-width: 280px;
@@ -853,6 +892,7 @@ button {
     }
     .services__title, .footer__line{
         margin-bottom: 1.5rem;
+        font-size: 20px;
     }
     .carousel{
         padding: 0 0 0 1rem;
@@ -926,49 +966,34 @@ button {
     }
 
     /*========== FOOTER ==========*/
-    .footer__top{
-        flex-wrap: wrap;
-        gap: 10px;
+    .footer {
+        padding: 4rem 0 2rem 0;
     }
-    .footer__top span{
-        width: 100%;
-        text-align: center;
-    }
-    .footer__left, .footer__content{
+    .footer-container{
         flex-direction: column;
-        align-items: center;
+        gap: 3rem;
+    }
+    .footer-brand{
+        width: 100%;
+    }
+    .footer-link-contain{
+        width: 100%;
+        justify-content: left;
+    }
+    .footer-logo{
+        width: 200px;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        text-align: center;
         gap: 1rem;
     }
-    .button__opa-31{
-        margin-top: 0;
-    }
-    .footer__links a, .footer__contact a{
-        font-size: 16px;
-    }
-    .footer__subtitle{
-        margin-bottom: 14px;
-    }
-    .footer__image{
-        margin-top: 2rem;
-        width: 100%;
-    }
-    .footer__links, .footer__contact{
-        width: 100%;
-        text-align: center;
-    }
-    .button__opa-31{
-        justify-content: center;
-    }
-    .footer__container{
-        flex-direction: column;
-        gap: 10px;
-    }
-    .footer__copy p{
-        text-align: center;
-    }
     .whatsapp-float{
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
+    }
+    .show-scroll {
+        bottom: 5.5rem;
     }
 
 /*========== PAGINA SERVICIOS ==========*/
@@ -1031,7 +1056,10 @@ button {
     .section{
         padding-block: 7rem 2rem;
     }
-    .nav__theme, .nav__buttons p{
+    .nav__buttons{
+        display: none;
+    }
+    .nav__buttons p{
         display: block;
     }
     .section__title{
@@ -1049,11 +1077,11 @@ button {
         font-size: 8px;
     }
     .nav__menu{
-        margin: auto;
+        margin: auto 0;
     }
     .nav__list{
         flex-direction: row;
-        column-gap: 4rem;
+        column-gap: 3rem;
     }
     .nav__link{
         color: var(--white-color);
@@ -1086,31 +1114,8 @@ button {
         font-size: 100px;
         font-weight: var(--font-regular);
     }
-    .button__opa-30{
-        justify-content: right;
-    }
-    .button__opa-30 {
-        position: relative;
-        bottom: 6rem;
-        justify-content: right;
-    }
     .home__container {
         padding: 3rem 0 0;
-    }
-    .nav__contact{
-        display: flex;
-        align-items: center;
-        color: var(--white-color);
-        cursor: pointer;
-        transition: color .3s;
-    }
-
-    /* MAIN */
-    .home__description{
-        width: 25%;
-        letter-spacing: 1px;
-        font-size: 12px;
-        margin-left: 7rem;
     }
     .circle-title{
         font-size: 8px;
@@ -1150,16 +1155,11 @@ button {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* estilos tablet */
+    /* estilos tablet */
     /*========== HOME ==========*/
     .home {
         height: 85svh;
         max-height: 720px;
-    }
-    .home__description {
-        width: 40%;
-        letter-spacing: 1px;
-        font-size: 16px;
     }
     .home__title .line-1{
         display: flex;
@@ -1169,11 +1169,24 @@ button {
     .home__title .line-3{
         font-size: 70px;
     }
-    .button__opa-30 {
-        position: relative;
-        bottom: 5.5rem;
-        right: 0rem;
-        justify-content: right;
+
+    /*========== NOSOTROS ==========*/
+    .about-container {
+        align-items: center;
+        gap: 40px;
+    }
+    .about-img img {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        object-fit: cover;
+    }
+     .about-title {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+    .about-text {
+        font-size: 15px;
     }
 
     /*========== SERVICIOS ==========*/
@@ -1216,25 +1229,13 @@ button {
         gap: 1rem;
         justify-content: center;
     }
-
-    /*========== FOTTER ==========*/
-
-    .footer__top{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-    .footer__top span{
+    /*========== FOOTER ==========*/
+    .footer-brand {
         width: 40%;
     }
-    .footer__links a, .footer__contact a{
-        font-size: 18px;
-    }
-    .button__opa-31{
-        margin-top: 2rem;
-    }
-    .project-card {
-        flex: 0 0 calc((100% - 20px) / 2);
+    .footer-link-contain {
+        justify-content: center;
+        width: 50%;
     }
 }
 
@@ -1261,6 +1262,7 @@ button {
     color: var(--white-color);
     text-transform: uppercase;
     font-size: 50px;
+    margin-bottom: 1rem;
 }
 .p-unline{
     color: var(--white-color);
